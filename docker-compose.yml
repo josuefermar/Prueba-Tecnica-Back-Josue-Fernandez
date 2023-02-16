@@ -1,0 +1,16 @@
+version: '3.0'
+services:
+  database:
+    image: mysql:5.7
+    container_name: mysql
+    hostname: mysql-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'graphql'   
+      MYSQL_ROOT_PASSWORD: 'graphql*2023'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - './.mysql-data/graphql:/var/lib/mysql'
