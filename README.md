@@ -77,59 +77,66 @@ Esta tabla tiene un foreign key con la tabla usuario en el campo user_id
 
 A continuacion se enlistan las diferentes consultas y los parametros que reciben
 
-- user(
+```
+    user(
         id: Int //Recibe un id obligatorio
     ): Retorna un User
-- users(
+
+    users(
         pagination: Int // Recibe el parametro pagination, numero de usuarios por pagina. Campo opcional
         page: Int // Recibe el parametro page, numero de pagina. Campo opcional
     ): Retorna un listado de Users
-- ticket(
+
+    ticket(
         id: Int //Recibe un id obligatorio
     ): Retorna un Ticket
-- tickets(
+
+    tickets(
         pagination: Int // Recibe el parametro pagination, numero de usuarios por pagina. Campo opcional
         page: Int // Recibe el parametro page, numero de pagina. Campo opcional
         user_id: Int // Recibe el parametro user_id, id usuario asignado al ticket. Campo opcional
         status: String // Recibe el parametro status, estado del ticket. Campo opcional
     ): Retorna un listado de Tickets
+```
 
 ## Lista de mutaciones
 
 A continuacion se enlistan las diferentes consultas y los parametros que reciben
 
-- addUser(
-        name: String!
-        email: String!
-    ): User
-    Metodo para creacion de usuarios
+```
+  addUser(
+      name: String!
+      email: String!
+  ): User
+  Metodo para creacion de usuarios
 
-- modifyUser(
-        id: Int!
-        name: String
-        email: String
-    ): User
-    Metodo para modificacion de usuarios
+  modifyUser(
+      id: Int!
+      name: String
+      email: String
+  ): User
+  Metodo para modificacion de usuarios
 
-- deleteUser(
-        id: Int!
-    ): User
-    Metodo para eliminacion de usuarios
+  deleteUser(
+      id: Int!
+  ): User
+  Metodo para eliminacion de usuarios
 
-- createTicket(
-        user_id: Int!
-        status: String!
-    ): Ticket
-    Metodo para creacion de tickets
+  createTicket(
+      user_id: Int!
+      status: String!
+  ): Ticket
+  Metodo para creacion de tickets
 
-- modifyTicket(
-        id: Int!
-        user_id: Int
-        status: String
-    ): Ticket
-    Metodo para modificacion de tickets
+  modifyTicket(
+      id: Int!
+      user_id: Int
+      status: String
+  ): Ticket
+  Metodo para modificacion de tickets
 
-- deleteTicket(
-        id: Int!
-    ): Ticket
-    Metodo para eliminacion de tickets
+  deleteTicket(
+      id: Int!
+  ): Ticket
+  Metodo para eliminacion de tickets
+```
