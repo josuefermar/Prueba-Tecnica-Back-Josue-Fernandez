@@ -26,7 +26,12 @@ composer run-script install-db-docker
 
 ```
 
-En caso de querer utilizar su propia base de datos modificar las credenciales en `app/config/db_credentials.php`. Luedo de modificar las credenciales deberas ejecutar el siguiente comando para correr las migraciones de la base de datos (ideal que sea una base de datos MySQL).
+Las credenciales por defecto se encuentran en el archivo `docker-compose.yml`.
+En caso de modificarlas recuerde modificar el archivo `app/config/db_credentials.php`
+
+En caso de querer utilizar su propia base de datos modificar las credenciales en `app/config/db_credentials.php`
+
+Luego de modificar las credenciales deberas ejecutar el siguiente comando para correr las migraciones de la base de datos (ideal que sea una base de datos MySQL).
 
 
 ```
