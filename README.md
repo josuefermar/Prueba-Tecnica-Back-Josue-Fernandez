@@ -56,3 +56,80 @@ Para realizar la consulta de datos puede utiliza [Postman](https://www.postman.c
     }
 }
 ```
+
+## Estructura Tablas
+
+Tabla users
+
+- id: Int(AutoIncrement)
+- name: String
+- email: String
+
+Tabla tickets
+
+- id: Int(AutoIncrement)
+- user_id: Int
+- status: String
+
+Esta tabla tiene un foreign key con la tabla usuario en el campo user_id
+
+## Lista de queries
+
+A continuacion se enlistan las diferentes consultas y los parametros que reciben
+
+- user(
+        id: Int //Recibe un id obligatorio
+    ): Retorna un User
+- users(
+        pagination: Int // Recibe el parametro pagination, numero de usuarios por pagina. Campo opcional
+        page: Int // Recibe el parametro page, numero de pagina. Campo opcional
+    ): Retorna un listado de Users
+- ticket(
+        id: Int //Recibe un id obligatorio
+    ): Retorna un Ticket
+- tickets(
+        pagination: Int // Recibe el parametro pagination, numero de usuarios por pagina. Campo opcional
+        page: Int // Recibe el parametro page, numero de pagina. Campo opcional
+        user_id: Int // Recibe el parametro user_id, id usuario asignado al ticket. Campo opcional
+        status: String // Recibe el parametro status, estado del ticket. Campo opcional
+    ): Retorna un listado de Tickets
+
+## Lista de mutaciones
+
+A continuacion se enlistan las diferentes consultas y los parametros que reciben
+
+- addUser(
+        name: String!
+        email: String!
+    ): User
+    Metodo para creacion de usuarios
+
+- modifyUser(
+        id: Int!
+        name: String
+        email: String
+    ): User
+    Metodo para modificacion de usuarios
+
+- deleteUser(
+        id: Int!
+    ): User
+    Metodo para eliminacion de usuarios
+
+- createTicket(
+        user_id: Int!
+        status: String!
+    ): Ticket
+    Metodo para creacion de tickets
+
+- modifyTicket(
+        id: Int!
+        user_id: Int
+        status: String
+    ): Ticket
+    Metodo para modificacion de tickets
+
+- deleteTicket(
+        id: Int!
+    ): Ticket
+    Metodo para eliminacion de tickets
