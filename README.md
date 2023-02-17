@@ -79,23 +79,35 @@ A continuacion se enlistan las diferentes consultas y los parametros que reciben
 
 ```
     user(
-        id: Int //Recibe un id obligatorio
+        //Recibe un id obligatorio
+        id: Int
     ): Retorna un User
 
     users(
-        pagination: Int // Recibe el parametro pagination, numero de usuarios por pagina. Campo opcional
-        page: Int // Recibe el parametro page, numero de pagina. Campo opcional
+        //Recibe el parametro pagination, numero de usuarios por pagina. Campo opcional
+        pagination: Int 
+
+        //Recibe el parametro page, numero de pagina. Campo opcional
+        page: Int 
     ): Retorna un listado de Users
 
     ticket(
-        id: Int //Recibe un id obligatorio
+        //Recibe un id obligatorio
+        id: Int 
     ): Retorna un Ticket
 
     tickets(
-        pagination: Int // Recibe el parametro pagination, numero de usuarios por pagina. Campo opcional
-        page: Int // Recibe el parametro page, numero de pagina. Campo opcional
-        user_id: Int // Recibe el parametro user_id, id usuario asignado al ticket. Campo opcional
-        status: String // Recibe el parametro status, estado del ticket. Campo opcional
+        //Recibe el parametro pagination, numero de usuarios por pagina. Campo opcional
+        pagination: Int 
+        
+        //Recibe el parametro page, numero de pagina. Campo opcional
+        page: Int 
+
+        //Recibe el parametro user_id, id usuario asignado al ticket. Campo opcional
+        user_id: Int 
+
+        //Recibe el parametro status, estado del ticket. Campo opcional
+        status: String 
     ): Retorna un listado de Tickets
 ```
 
@@ -105,38 +117,38 @@ A continuacion se enlistan las diferentes consultas y los parametros que reciben
 
 ```
   addUser(
-      name: String!
-      email: String!
-  ): User
+      name: String
+      email: String
+  ): Retorna un  User
   Metodo para creacion de usuarios
 
   modifyUser(
-      id: Int!
-      name: String
-      email: String
-  ): User
+      id: Int
+      name: String //Campo Opcional
+      email: String //Campo Opcional
+  ): Retorna un  User
   Metodo para modificacion de usuarios
 
   deleteUser(
-      id: Int!
-  ): User
+      id: Int
+  ): Retorna un  User
   Metodo para eliminacion de usuarios
 
   createTicket(
-      user_id: Int!
-      status: String!
-  ): Ticket
+      user_id: Int
+      status: String
+  ): Retorna un  Ticket
   Metodo para creacion de tickets
 
   modifyTicket(
-      id: Int!
-      user_id: Int
-      status: String
-  ): Ticket
+      id: Int
+      user_id: Int //Campo Opcional
+      status: String //Campo Opcional
+  ): Retorna un  Ticket
   Metodo para modificacion de tickets
 
   deleteTicket(
-      id: Int!
-  ): Ticket
+      id: Int
+  ): Retorna un Ticket
   Metodo para eliminacion de tickets
 ```
