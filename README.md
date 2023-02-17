@@ -41,7 +41,7 @@ En caso de querer utilizar otro tipo de base de datos revisar el archivo `app/Mi
 
 ## Consulta de datos
 
-Para realizar la consulta de datos puede utiliza Postman o la extension de chrome [chromeiql](https://chrome.google.com/webstore/detail/chromeiql/fkkiamalmpiidkljmicmjfbieiclmeij)
+Para realizar la consulta de datos puede utiliza [Postman](https://www.postman.com/downloads/) o la extension de chrome [chromeiql](https://chrome.google.com/webstore/detail/chromeiql/fkkiamalmpiidkljmicmjfbieiclmeij)
 
 ## Consulta de prueba
 
