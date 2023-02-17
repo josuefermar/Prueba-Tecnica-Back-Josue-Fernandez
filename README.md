@@ -18,9 +18,11 @@ Para la ejecucion del proyecto puedes utilizat XAMP, LAMP o WAMP colocando el pr
 Antes de poder acceder a la aplicacion es necesario ejecutar los siguientes comandos: 
 
 ```
-composer install //comando para la instalacion de las dependencias de composer
+#comando para la instalacion de las dependencias de composer
+composer install
 
-composer run-script install-db-docker //comando para la instalacion del docker el cual contiene la base de datos
+#comando para la instalacion del docker el cual contiene la base de datos
+composer run-script install-db-docker 
 
 ```
 
@@ -28,7 +30,7 @@ En caso de querer utilizar su propia base de datos modificar las credenciales en
 
 
 ```
-composer run-script migrationsdatos
+composer run-script migrations
 ```
 
 En caso de querer utilizar otro tipo de base de datos revisar el archivo `app/Migrations/queries.sql` para validar la estructura y relaciones de las tablas `users` y `tickets`
